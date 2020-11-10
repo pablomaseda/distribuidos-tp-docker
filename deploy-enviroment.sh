@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Volumen para persistencia
-#mkdir mysqlDB
+mkdir mysqlDB
 
 # Configuro el frontend
 
@@ -10,10 +10,22 @@ cp Dockerfile.reactApp reactApp/Dockerfile
 
 # Configuro servicios del backend
 
-git clone --single-branch --branch development https://github.com/Gianni-Nicolas/modulo-admin.git springApp
-cp Dockerfile.springApp springApp/Dockerfile 
-cd springApp
+git clone --single-branch --branch development https://github.com/Gianni-Nicolas/modulo-admin.git adminApp
+cp Dockerfile.springApp adminApp/Dockerfile 
+cd adminApp
 ./mvn package
+
+git clone --single-branch --branch development https://github.com/Gianni-Nicolas/modulo-docente.git docenteApp
+cp Dockerfile.springApp docenteApp/Dockerfile 
+cd docenteApp
+./mvn package
+
+git clone --single-branch --branch development https://github.com/Gianni-Nicolas/modulo-estudiante.git estudianteApp
+cp Dockerfile.springApp estudianteApp/Dockerfile 
+cd estudianteApp
+./mvn package
+
+
 
 # Al final ejecutar
 #docker-compose build && docker-compose up
