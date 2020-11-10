@@ -85,7 +85,10 @@ INSERT INTO `direccion` (`id`, `calle`, `localidad`, `pais`, `provincia`) VALUES
 (11,'Calle 11','Localidad Dummy','Pais Dummy','Provincia Dummy'),
 (12,'Calle 12','Localidad Dummy','Pais Dummy','Provincia Dummy'),
 (13,'Calle 13','Localidad Dummy','Pais Dummy','Provincia Dummy'),
-(14,'Calle 14','Localidad Dummy','Pais Dummy','Provincia Dummy');
+(14,'Calle 14','Localidad Dummy','Pais Dummy','Provincia Dummy'),
+(15,'Calle 15','Localidad Dummy','Pais Dummy','Provincia Dummy'),
+(16,'Calle 16','Localidad Dummy','Pais Dummy','Provincia Dummy'),
+(17,'Calle 17','Localidad Dummy','Pais Dummy','Provincia Dummy');
 
 
 -- USUARIOS
