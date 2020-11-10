@@ -1,0 +1,46 @@
+version: '3'
+
+services:
+
+  db:
+    container_name: motor_db
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 12345678
+      MYSQL_DATABASE: TrabajoFinal
+    volumes:
+      - ./mysqlDB:/var/lib/mysql
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8081:8080
+
+  node_react:
+    container_name: node_react
+    tty: true
+    stdin_open: true
+    build: reactApp
+    ports:
+      - 3000:3000
+    environment:
+      - NODE_ENV=production
+      - CI=true
+
+  spring_app:
+    container_name: spring_app
+    build: springApp
+    ports:
+      - 8080:8080
+    restart: always
+    depends_on: 
+      - db # Dependemos que inicie la BD
+    links:
+      - db
+    environment: # Variables en entorno Spring
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/TrabajoFinal?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false&allowPublicKeyRetrieval=true
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: 12345678
