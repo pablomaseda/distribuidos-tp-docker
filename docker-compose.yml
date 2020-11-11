@@ -1,8 +1,7 @@
-﻿
-version: '3.8'
+﻿# Use root/example as user/password credentials
+version: '3'
 
 services:
-
   db:
     container_name: motor_db
     image: mysql
@@ -31,7 +30,7 @@ services:
     environment:
       - NODE_ENV=production
       - CI=true
-
+ 
   admin_app:
     container_name: admin_app
     build: adminApp
@@ -46,7 +45,6 @@ services:
       SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/TrabajoFinal?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false&allowPublicKeyRetrieval=true
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: 12345678
-
   docente_app:
     container_name: docente_app
     build: docenteApp
@@ -62,7 +60,7 @@ services:
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: 12345678
 
- estudiante_app:
+  estudiante_app:
     container_name: estudiante_app
     build: estudianteApp
     ports:
@@ -76,3 +74,5 @@ services:
       SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/TrabajoFinal?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false&allowPublicKeyRetrieval=true
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: 12345678
+
+
