@@ -10,17 +10,17 @@ cp Dockerfile.reactApp reactApp/Dockerfile
 
 # Configuro servicios del backend
 
-git clone --single-branch --branch development https://github.com/Gianni-Nicolas/modulo-admin.git adminApp
+git clone https://github.com/Gianni-Nicolas/modulo-administrador.git adminApp
 cp Dockerfile.springApp adminApp/Dockerfile 
 cd adminApp
 ./mvn package
 
-git clone --single-branch --branch development https://github.com/Gianni-Nicolas/modulo-docente.git docenteApp
+git clone https://github.com/Gianni-Nicolas/modulo-docente.git docenteApp
 cp Dockerfile.springApp docenteApp/Dockerfile 
 cd docenteApp
 ./mvn package
 
-git clone --single-branch --branch development https://github.com/Gianni-Nicolas/modulo-estudiante.git estudianteApp
+git clone https://github.com/Gianni-Nicolas/modulo-estudiante.git estudianteApp
 cp Dockerfile.springApp estudianteApp/Dockerfile 
 cd estudianteApp
 ./mvn package
