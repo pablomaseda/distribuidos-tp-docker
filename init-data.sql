@@ -95,25 +95,25 @@ INSERT INTO `direccion` (`id`, `calle`, `localidad`, `pais`, `provincia`) VALUES
 
 insert into usuario (id, apellido, dni, email, nombre, password,primer_ingreso,telefono, id_direccion, id_rol)
 VALUES
-(1, "Alvarez","9999990", "jmalvarez","Juan Manuel","unla2020", 1,"555-5555",1,1),
-(2, "Perez","9999991", "jlperez","Juan Luis","admin123", 1,"555-5555",2,2),
-(3, "Rodriguez","9999992", "cdrodriguez","Carlos Daniel","d0c3nt3", 1,"555-5555",3,2),
-(4, "Lopez","9999993", "eglopez","Edgardo","prog&intr", 1,"555-5555",4,2),
-(5, "Dios","9999993", "dgod","Docente","dgod123", 1,"555-5555",5,2),
-(6, "Mate","9999944", "testMate1","Dummy","mate2020", 1,"555-5555",6,3),
-(7, "Prog","9999955", "testProg1","Dummy","prog2020", 1,"555-5555",7,3),
-(8, "Ibdmat3","9999966", "ibdmat3","Dummy","test2\\0\\0", 1,"555-5555",8,3),
-(9, "grad2020","9999977", "grad2020","Dummy","grad@\"2020\"", 1,"555-5555",9,3),
+(1, "Alvarez","9999990", "jmalvarez@miunla.edu.ar","Juan Manuel","unla2020", 0,"555-5555",1,1),
+(2, "Perez","9999991", "jlperez@miunla.edu.ar","Juan Luis","admin123", 0,"555-5555",2,2),
+(3, "Rodriguez","9999992", "cdrodriguez@miunla.edu.ar","Carlos Daniel","d0c3nt3", 0,"555-5555",3,2),
+(4, "Lopez","9999993", "eglopez@miunla.edu.ar","Edgardo","prog&intr", 0,"555-5555",4,2),
+(5, "Dios","9999993", "dgod@miunla.edu.ar","Docente","dgod123", 0,"555-5555",5,2),
+(6, "Mate","9999944", "testMate1@miunla.edu.ar","Dummy","mate2020", 0,"555-5555",6,3),
+(7, "Prog","9999955", "testProg1@miunla.edu.ar","Dummy","prog2020", 0,"555-5555",7,3),
+(8, "Ibdmat3","9999966", "ibdmat3@miunla.edu.ar","Dummy","test2\\0\\0", 0,"555-5555",8,3),
+(9, "grad2020","9999977", "grad2020@miunla.edu.ar","Dummy","grad@\"2020\"", 0,"555-5555",9,3),
 
-(10, "Alu1","9998880", "dalu1","Dummy","dalu1", 1,"555-5555",10,3),
-(11, "Alu2","9998881", "dalu2","Dummy","dalu2", 1,"555-5555",11,3),
-(12, "Alu3","9998882", "dalu3","Dummy","dalu3", 1,"555-5555",12,3),
-(13, "Alu4","9998883", "dalu4","Dummy","dalu4", 1,"555-5555",13,3),
-(14, "Alu5","9998884", "dalu5","Dummy","dalu5", 1,"555-5555",14,3),
+(10, "Alu1","9998880", "dalu1@miunla.edu.ar","Dummy","dalu1", 1,"555-5555",10,3),
+(11, "Alu2","9998881", "dalu2@miunla.edu.ar","Dummy","dalu2", 1,"555-5555",11,3),
+(12, "Alu3","9998882", "dalu3@miunla.edu.ar","Dummy","dalu3", 1,"555-5555",12,3),
+(13, "Alu4","9998883", "dalu4@miunla.edu.ar","Dummy","dalu4", 1,"555-5555",13,3),
+(14, "Alu5","9998884", "dalu5@miunla.edu.ar","Dummy","dalu5", 1,"555-5555",14,3),
 
-(15, "solobd1","9995542", "solobd1","Dummy","solobd1", 1,"555-5555",15,3),
-(16, "solobd2","9995523", "solobd2","Dummy","solobd2", 1,"555-5555",16,3),
-(17, "solobd3","9995534", "solobd3","Dummy","solobd3", 1,"555-5555",17,3);
+(15, "solobd1","9995542", "solobd1@miunla.edu.ar","Dummy","solobd1", 1,"555-5555",15,3),
+(16, "solobd2","9995523", "solobd2@miunla.edu.ar","Dummy","solobd2", 1,"555-5555",16,3),
+(17, "solobd3","9995534", "solobd3@miunla.edu.ar","Dummy","solobd3", 1,"555-5555",17,3);
 
 
 -- MATERIAS
