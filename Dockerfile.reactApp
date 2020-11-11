@@ -2,13 +2,16 @@ FROM node:12.16.1-alpine3.9 as build
 WORKDIR /app
 
 # Los test de npm corren en modo: non-interactively
-ENV CI=true
+# ENV CI=true
 	
 COPY ./package.json /app/
 RUN npm install --silent
 
+# Copiar al entorno de Docker
+COPY . .
+
 # Hacemos el Build de la app React
-# RUN npm run build
+RUN npm run build
 
 # PREPRODUCCION
 ##############
